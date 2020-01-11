@@ -59,8 +59,8 @@ class Snake {
                 let index = this.body.length - 1 - i;
                 let bodyInAreaX =  this.body[index].x;
                 let bodyInAreaY =  this.body[index].y;
-                let stageWidth = this.scene.sys.game.config.width;
-                let stageHeight = this.scene.sys.game.config.height;
+                const stageWidth = this.scene.sys.game.config.width;
+                const stageHeight = this.scene.sys.game.config.height;
                 this.body[index].x = Phaser.Math.Wrap(bodyInAreaX, 0, stageWidth); // si se sale del x0, se retorna a x_máximo de nuestro canvas;
                 this.body[index].y = Phaser.Math.Wrap(bodyInAreaY, 20, stageHeight); 
             }

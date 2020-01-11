@@ -21,8 +21,8 @@ class Food {
     }
 
     createFood() {
-        let stageWidth = this.scene.sys.game.config.width;
-        let stageHeight = this.scene.sys.game.config.height;
+        const stageWidth = this.scene.sys.game.config.width;
+        const stageHeight = this.scene.sys.game.config.height;
         let x = Phaser.Math.Between(30, stageWidth - 30);
         let y = Phaser.Math.Between(30, stageHeight - 30);
 
