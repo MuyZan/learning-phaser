@@ -30,8 +30,9 @@ class Play extends Phaser.Scene {
             this.snake.changeMov('down');
         });
 
-        //colision de cabeza de serpiente con comida
-        /*como es un grupo (food) cada vez que se genere una nueva
+        /*
+        Colision de cabeza de serpiente con la comida.
+        Como es un grupo (food), cada vez que se genere una nueva
         comida se va meter en el grupo y por lo tanto en la colision.
         */
         this.physics.add.collider(this.snake.body[0], this.food.food, () => {
