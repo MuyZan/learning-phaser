@@ -13,7 +13,11 @@ class Play extends Phaser.Scene {
     }
 
     create() {
-        
+
+        this.scene.launch('UI'); // ejecuta una llamada a una escena para que se reproduzca a la vez.
+        const sceneUI = this.scene.get('UI'); // referencia de la escena UI
+
+
         this.input.keyboard.on('keydown_RIGHT', () => {
             this.snake.changeMov('right');
         });
@@ -38,6 +42,7 @@ class Play extends Phaser.Scene {
         this.physics.add.collider(this.snake.body[0], this.food.food, () => {
             this.food.createFood();
             this.snake.grow();
+            sceneUI.addPoint();
         });
     }
 
